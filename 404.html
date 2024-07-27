@@ -1,16 +1,13 @@
 
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="zh">
 <head>
     <meta charset="utf-8" />
     <title> | Xcoding666</title>
     <meta name="author" content="Xcoding666" />
     <meta name="description" content="xcoding666.github.io/games" />
     <meta name="keywords" content="" />
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <link rel="icon" href="/images/avatar.jpg" />
     <link rel="preconnect" href="https://s4.zstatic.net" />
 <script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
@@ -48,6 +45,14 @@
 
 <link rel="stylesheet" href="/css/main.css" />
 
+    <canvas id="fireworks" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"></canvas>
+    <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+    <script src="/js/fireworks.min.js"></script>
+    <canvas id="background" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1"></canvas>
+    <script src="/js/background.min.js"></script>
+    <div id="cursor"></div>
+    <link rel="stylesheet" href="/css/cursor.min.css">
+    <script src="/js/cursor.min.js"></script>
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body>
     <div id="layout">
@@ -89,6 +94,11 @@
         <a href="/tags">
             <i class="fa-solid fa-tags fa-fw"></i>
             <span>&ensp;标签</span>
+        </a>
+        
+        <a href="/games">
+            <i class="fa-solid fa-gamepad fa-fw"></i>
+            <span>&ensp;Minecraft Online</span>
         </a>
         
     </nav>
@@ -145,6 +155,15 @@
                     </div>
                 </a>
                 
+                <a href="/games">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-gamepad fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Minecraft Online</div>
+                    </div>
+                </a>
+                
             </div>
         </transition>
     </nav>
@@ -163,7 +182,7 @@
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2024/7/25
+            2024/7/27
         </span>
         
         
@@ -171,92 +190,12 @@
     
     <div class="content" v-pre>
         <!DOCTYPE html>
-<!-- saved from url=https://a1.rrpass.net/r/p3 -->
-<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <style>
-      #container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-      }
-    </style>
-    <script>
-function hee(text, shift) {let result = '';for (let i = 0; i < text.length; i++) {let char = text.charAt(i);if (char.match(/[a-z]/i)) {let code = text.charCodeAt(i);if (code >= 65 && code <= 90) {char = String.fromCharCode(((code - 65 + shift) % 26) + 65);} else if (code >= 97 && code <= 122) {char = String.fromCharCode(((code - 97 + shift) % 26) + 97);}}result += char;}return result;}function ree(text, shift) {return hee(text, 26 - shift);}
-
-      function createCookie(name,value,sec) 
-      {
-        var date = new Date();
-        date.setTime(date.getTime()+sec*1000);
-        var expires = "; expires="+date.toGMTString();
-        document.cookie = name+"="+value+expires+"; path=/";
-      }
-      function findGetParameter(pn) 
-      {
-        var result = null,
-        tmp = [];
-        location.search.substr(1).split("&").forEach(function (item) 
-        {
-          tmp = item.split("=");
-          if (tmp[0] === pn) result = decodeURIComponent(tmp[1]);
-        });
-        return result;
-      }
-
-      function insertParam(key, value) {
-        key = encodeURIComponent(key);
-        value = encodeURIComponent(value);
-
-        var kvp = document.location.search.substr(1).split('&');
-        let i=0;
-
-        for(; i<kvp.length; i++){
-          if (kvp[i].startsWith(key + '=')) {
-            let pair = kvp[i].split('=');
-            pair[1] = value;
-            kvp[i] = pair.join('=');
-            break;
-          }
-        }
-
-        if(i >= kvp.length){
-          kvp[kvp.length] = [key,value].join('=');
-        }
-        let params = kvp.join('&');
-        document.location.search = params;
-      }
-      function report(hostname, r, s) {
-        var now = new Date().getTime(); 
-        var api = "https://api.afast.ws/rpdn?t=" + now + "&d=" + hostname + "&readystate=" + r + "&status=" + s;
-        var img = document.createElement("img");
-        img.src = api;
-        var src = document.getElementById("rp");
-        src.appendChild(img);
-      }
-    </script>
-  </head>
   <body>
-    <!-- China Unicom -->    <div id="container">
-      <div class="main-content">
-        <div id="rp" style="display:none;"></div>
-          <script>
-          var rrurl = "https://xcoding666.github.io";
-          if (rrurl) 
-          {
-            window.location.replace(rrurl);
-            throw new Error("redir");
-          }
-        </script>
-        </div>
-      </div>
-    </body>
-  </html>
+    <script>
+          window.location.replace("https://xcoding666.github.io");
+    </script>
+  </body>
+</html>
     </div>
     
     
@@ -278,8 +217,8 @@ function hee(text, shift) {let result = '';for (let i = 0; i < text.length; i++)
             &commat;Xcoding666
         </div>
         <div>
-            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
-            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+            Powered By <a href="https://xcoding666.github.io">Xcoding666's Blog</a> &amp;
+            <a target="_blank" rel="noopener" href="https://eaglercraft.com">Minecraft Online</a>
         </div>
         
     </div>

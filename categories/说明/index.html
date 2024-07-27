@@ -1,16 +1,13 @@
 
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="zh">
 <head>
     <meta charset="utf-8" />
     <title>Categories: 说明 | Xcoding666</title>
     <meta name="author" content="Xcoding666" />
     <meta name="description" content="xcoding666.github.io/games" />
     <meta name="keywords" content="" />
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <link rel="icon" href="/images/avatar.jpg" />
     <link rel="preconnect" href="https://s4.zstatic.net" />
 <script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
@@ -44,6 +41,14 @@
 
 <link rel="stylesheet" href="/css/main.css" />
 
+    <canvas id="fireworks" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"></canvas>
+    <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+    <script src="/js/fireworks.min.js"></script>
+    <canvas id="background" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1"></canvas>
+    <script src="/js/background.min.js"></script>
+    <div id="cursor"></div>
+    <link rel="stylesheet" href="/css/cursor.min.css">
+    <script src="/js/cursor.min.js"></script>
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body>
     <div id="layout">
@@ -85,6 +90,11 @@
         <a href="/tags">
             <i class="fa-solid fa-tags fa-fw"></i>
             <span>&ensp;标签</span>
+        </a>
+        
+        <a href="/games">
+            <i class="fa-solid fa-gamepad fa-fw"></i>
+            <span>&ensp;Minecraft Online</span>
         </a>
         
     </nav>
@@ -138,6 +148,15 @@
                             <i class="fa-solid fa-tags fa-fw"></i>
                         </div>
                         <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                    </div>
+                </a>
+                
+                <a href="/games">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-gamepad fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Minecraft Online</div>
                     </div>
                 </a>
                 
@@ -235,7 +254,45 @@
                     
                     <span class="tag">
                         
-                        <a href="/tags/%E8%AF%B4%E6%98%8E/" style="color: #ff7d73">
+                        <a href="/tags/%E8%AF%B4%E6%98%8E/" style="color: #ffa2c4">
+                            说明
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2024/7/25</div>
+            <a href="/2024/07/25/judge/">
+                <h3>判题结果说明</h3>
+            </a>
+            <div class="info">
+                
+                <span class="category">
+                    <a href="/categories/%E8%AF%B4%E6%98%8E/">
+                        <span class="icon">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </span>
+                        说明
+                    </a>
+                </span>
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </span>
+                    
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/%E8%AF%B4%E6%98%8E/" style="color: #00a596">
                             说明
                         </a>
                     </span>
@@ -284,44 +341,6 @@
         </div>
     </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2024/7/25</div>
-            <a href="/2024/07/25/judge/">
-                <h3>判题结果说明</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/%E8%AF%B4%E6%98%8E/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        说明
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/%E8%AF%B4%E6%98%8E/" style="color: #ffa2c4">
-                            说明
-                        </a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
-    
 </div>
 
             <footer id="footer">
@@ -335,8 +354,8 @@
             &commat;Xcoding666
         </div>
         <div>
-            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
-            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+            Powered By <a href="https://xcoding666.github.io">Xcoding666's Blog</a> &amp;
+            <a target="_blank" rel="noopener" href="https://eaglercraft.com">Minecraft Online</a>
         </div>
         
     </div>
