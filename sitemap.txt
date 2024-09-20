@@ -1,12 +1,15 @@
+https://xcoding666.github.io/2024/09/20/class1/
 https://xcoding666.github.io/games.html
 https://xcoding666.github.io/404.html
 https://xcoding666.github.io/about.html
 https://xcoding666.github.io/2024/09/16/README/
 https://xcoding666.github.io/tags.html
 https://xcoding666.github.io/categories.html
+https://xcoding666.github.io/mc/1.3/index.html
 https://xcoding666.github.io/mc/1.5.2/index.html
 https://xcoding666.github.io/mc/1.8.8/index.html
-https://xcoding666.github.io/mc/1.3/index.html
 https://xcoding666.github.io/
 https://xcoding666.github.io/tags/%E6%A0%87%E7%AD%BE/
+https://xcoding666.github.io/tags/cpp/
 https://xcoding666.github.io/categories/%E5%88%86%E7%B1%BB/
+https://xcoding666.github.io/categories/%E7%BC%96%E7%A8%8B/
